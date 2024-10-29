@@ -1,0 +1,23 @@
+source 'https://github.com/CocoaPods/Specs.git'
+source 'git@github.com:WANNABY/ios-specs-internal.git'
+
+inhibit_all_warnings!
+use_frameworks!
+
+project 'Example.xcodeproj'
+
+platform :ios, '12.0'
+
+target 'Wanna Sample' do
+  pod 'WannaSDK'
+  pod 'WannaDebug', :path => '../WannaDebug.podspec'
+  pod 'WannaTryOn', :path => '../WannaTryOn.podspec'
+end
+
+post_install do |installer|
+  installer.pods_project.targets.each do |target|
+    target.build_configurations.each do |config|
+      config.build_settings['IPHONEOS_DEPLOYMENT_TARGET'] = '12.0'
+    end
+  end
+end

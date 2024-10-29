@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="pdc-O2-RR3">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Device Checking View Controller-->
+        <scene sceneID="qmp-gN-od5">
+            <objects>
+                <viewController id="GTQ-tF-9Q2" customClass="DeviceCheckingViewController" customModule="WannaTryOn" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="DbO-Le-s5L">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="33S-Ah-Te3">
+                                <rect key="frame" x="123.66666666666669" y="336" width="146" height="180"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qe2-iT-aSo">
+                                        <rect key="frame" x="0.0" y="0.0" width="146" height="30"/>
+                                        <state key="normal" title="SHOES"/>
+                                        <connections>
+                                            <action selector="runSneakers" destination="GTQ-tF-9Q2" eventType="touchUpInside" id="c4m-ma-G2K"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KRt-kc-bYz">
+                                        <rect key="frame" x="0.0" y="50" width="146" height="30"/>
+                                        <state key="normal" title="WATCHES"/>
+                                        <connections>
+                                            <action selector="runWatch" destination="GTQ-tF-9Q2" eventType="touchUpInside" id="F6x-MD-s70"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OuU-0R-6N8">
+                                        <rect key="frame" x="0.0" y="100" width="146" height="30"/>
+                                        <state key="normal" title="WATCHES (in-mirror)"/>
+                                        <connections>
+                                            <action selector="runWatchInMirror" destination="GTQ-tF-9Q2" eventType="touchUpInside" id="U6g-pd-7uk"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UD7-Cs-LlW">
+                                        <rect key="frame" x="0.0" y="150" width="146" height="30"/>
+                                        <state key="normal" title="CLOTHES"/>
+                                        <connections>
+                                            <action selector="runClothes" destination="GTQ-tF-9Q2" eventType="touchUpInside" id="xFX-cj-gcI"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="m7b-91-Upi"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="33S-Ah-Te3" firstAttribute="centerY" secondItem="DbO-Le-s5L" secondAttribute="centerY" id="1YZ-fV-Fok"/>
+                            <constraint firstItem="33S-Ah-Te3" firstAttribute="centerX" secondItem="DbO-Le-s5L" secondAttribute="centerX" id="u1v-wM-gL4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="AfE-zU-i66"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pqK-ez-VKX" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="967" y="-564"/>
+        </scene>
+        <!--Navigation View Controller-->
+        <scene sceneID="2ia-VR-OxB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pdc-O2-RR3" customClass="NavigationViewController" customModule="Wanna_Sample" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cwD-dt-4ee">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="GTQ-tF-9Q2" kind="relationship" relationship="rootViewController" id="Hdo-XD-kdA"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w0a-F9-bBA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="-564.46776611694156"/>
+        </scene>
+    </scenes>
+</document>
